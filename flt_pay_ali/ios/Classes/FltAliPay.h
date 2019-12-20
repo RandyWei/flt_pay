@@ -7,9 +7,18 @@
 
 #import <Foundation/Foundation.h>
 
+#import <Flutter/Flutter.h>
+#import <AlipaySDK/AlipaySDK.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FltAliPay : NSObject
+@interface FltAliPay : NSObject <FlutterStreamHandler>
+
+@property(nonatomic) FlutterEventChannel* eventChannel;
+@property(nonatomic) FlutterEventSink eventSink;
+
++ (instancetype)shareInstance;
+- (void)pay:(id)json;
 
 @end
 
