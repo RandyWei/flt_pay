@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) FlutterEventSink eventSink;
 
 + (instancetype)shareInstance;
-- (void)pay:(id)json;
+- (void)pay:(NSString *)json fromScheme:(NSString *)appScheme;
 
 @end
 

@@ -1,4 +1,6 @@
 #import <Flutter/Flutter.h>
 
-@interface FltPayWechatPlugin : NSObject<FlutterPlugin>
+#import "WXApi.h"
+
+@interface FltPayWechatPlugin : NSObject<FlutterPlugin, WXApiDelegate>
 @end
