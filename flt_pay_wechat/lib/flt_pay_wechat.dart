@@ -25,7 +25,7 @@ class FltPayWechat {
       Map<String, dynamic> payInfo, Function(String result) callback) async {
     _callback = callback;
     var arguments = {
-      "appId": payInfo["appId"],
+      "appId": payInfo["appid"],
       "partnerId": payInfo["partnerid"],
       "prepayId": payInfo["prepayid"],
       "nonceStr": payInfo["noncestr"],
