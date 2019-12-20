@@ -22,7 +22,7 @@ class FltPayWechat {
   }
 
   static Future weChatPay(
-      Map<String, String> payInfo, Function(String result) callback) async {
+      Map<String, dynamic> payInfo, Function(String result) callback) async {
     _callback = callback;
     await _channel.invokeMethod('weChatPay', {
       "appId": payInfo["appId"],
