@@ -55,6 +55,7 @@
 }
 
 - (void)pay:(NSDictionary *)info {
+    NSLog(@"支付参数：%@", info);
     PayReq *request = [[PayReq alloc] init];
     request.partnerId = [NSString stringWithFormat:@"%@", info[@"partnerId"]]; // 商家id
     request.prepayId = [NSString stringWithFormat:@"%@", info[@"prepayId"]]; // 预支付订单
