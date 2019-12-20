@@ -7,7 +7,7 @@ class FltPayAli {
 
   static Future<String> aliPay(String payInfo) async {
     final String result =
-        await _channel.invokeMethod('payInfo', {"payInfo": payInfo});
+        await _channel.invokeMethod('aliPay', {"payInfo": payInfo});
     return result;
   }
 }
