@@ -26,11 +26,11 @@ class FltPayWechat {
     _callback = callback;
     await _channel.invokeMethod('weChatPay', {
       "appId": payInfo["appId"],
-      "partnerId": payInfo["partnerId"],
-      "prepayId": payInfo["prepayId"],
-      "nonceStr": payInfo["nonceStr"],
-      "timeStamp": payInfo["timeStamp"],
-      "packageValue": payInfo["packageValue"],
+      "partnerId": payInfo["partnerid"],
+      "prepayId": payInfo["prepayid"],
+      "nonceStr": payInfo["noncestr"],
+      "timeStamp": payInfo["timestamp"],
+      "packageValue": payInfo["package"],
       "sign": payInfo["sign"],
       "extData": payInfo["extData"],
     });
