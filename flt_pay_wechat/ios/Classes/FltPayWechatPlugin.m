@@ -49,16 +49,7 @@
     return [WXApi handleOpenURL:url delegate:self];
 }
 
-- (void)pay:(id)json {
-    NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *error = nil;
-    NSDictionary *info = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-    
-    if (error) {
-        [self->_channel invokeMethod:@"weChatPayResult" arguments:@"Fail"];
-        return;
-    }
-    
+- (void)pay:(NSDictionary *)info {
     PayReq *request = [[PayReq alloc] init];
     request.partnerId = [NSString stringWithFormat:@"%@", info[@"partnerId"]]; // 商家id
     request.prepayId = [NSString stringWithFormat:@"%@", info[@"prepayId"]]; // 预支付订单
