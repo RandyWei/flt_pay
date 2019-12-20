@@ -58,7 +58,7 @@
     PayReq *request = [[PayReq alloc] init];
     request.partnerId = [NSString stringWithFormat:@"%@", info[@"partnerId"]]; // 商家id
     request.prepayId = [NSString stringWithFormat:@"%@", info[@"prepayId"]]; // 预支付订单
-    request.package = [NSString stringWithFormat:@"%@", info[@"package"]]; // 商家根据财付通文档填写的数据和签名
+    request.package = [NSString stringWithFormat:@"%@", info[@"packageValue"]]; // 商家根据财付通文档填写的数据和签名
     request.nonceStr = [NSString stringWithFormat:@"%@", info[@"nonceStr"]]; // 随机串，防重发
     request.timeStamp = (UInt32)[info[@"timeStamp"] integerValue]; // 时间戳，防重发
     request.sign = [NSString stringWithFormat:@"%@", info[@"sign"]]; // 商家根据微信开放平台文档对数据做的签名

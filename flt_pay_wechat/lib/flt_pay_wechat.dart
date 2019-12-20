@@ -30,7 +30,7 @@ class FltPayWechat {
       "prepayId": payInfo["prepayid"],
       "nonceStr": payInfo["noncestr"],
       "timeStamp": payInfo["timestamp"],
-      "package": payInfo["package"],
+      "packageValue": payInfo["package"],
       "sign": payInfo["sign"],
       "extData": payInfo["extData"],
     };
