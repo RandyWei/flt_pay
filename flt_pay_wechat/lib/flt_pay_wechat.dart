@@ -24,7 +24,7 @@ class FltPayWechat {
   static Future weChatPay(
       Map<String, dynamic> payInfo, Function(String result) callback) async {
     _callback = callback;
-    await _channel.invokeMethod('weChatPay', {
+    var arguments = {
       "appId": payInfo["appId"],
       "partnerId": payInfo["partnerid"],
       "prepayId": payInfo["prepayid"],
@@ -33,6 +33,9 @@ class FltPayWechat {
       "packageValue": payInfo["package"],
       "sign": payInfo["sign"],
       "extData": payInfo["extData"],
-    });
+    };
+    print('FltPayWechat.weChatPay payInfo=$payInfo');
+    print('FltPayWechat.weChatPay arguments=$arguments');
+    await _channel.invokeMethod('weChatPay', arguments);
   }
 }
