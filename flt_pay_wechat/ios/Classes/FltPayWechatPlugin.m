@@ -29,6 +29,8 @@
     }else if ([@"weChatInit" isEqualToString:call.method]) {
         NSString *appid = [NSString stringWithFormat:@"%@", call.arguments[@"appid"]];
         NSString *link = [NSString stringWithFormat:@"%@", call.arguments[@"scheme"]];
+        NSLog(@"appid=%@", appid);
+        NSLog(@"link=%@", link);
         BOOL success = [WXApi registerApp:appid universalLink:link];
         if (!success) {
             NSLog(@"注册失败");
