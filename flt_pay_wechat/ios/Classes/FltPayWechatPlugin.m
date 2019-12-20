@@ -29,7 +29,10 @@
     }else if ([@"weChatInit" isEqualToString:call.method]) {
         NSString *appid = [NSString stringWithFormat:@"%@", call.arguments[@"appid"]];
         NSString *link = [NSString stringWithFormat:@"%@", call.arguments[@"scheme"]];
-        [WXApi registerApp:appid universalLink:link];
+        BOOL success = [WXApi registerApp:appid universalLink:link];
+        if (!success) {
+            NSLog(@"注册失败");
+        }
         result(nil);
     }else if ([@"weChatPay" isEqualToString:call.method]) {
         [self pay:call.arguments];
@@ -61,6 +64,7 @@
     [WXApi sendReq:request completion:^(BOOL success) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!success) {
+                NSLog(@"调起失败");
                 [self->_channel invokeMethod:@"weChatPayResult" arguments:@"Fail"];
             }
         });
