@@ -74,6 +74,9 @@
 }
 
 - (void)pay:(NSString *)payInfo {
+    UIWindow *win = [[UIApplication sharedApplication] windows].firstObject;
+    [win setHidden:NO];
+    
     // 调用支付结果开始支付
     [[AlipaySDK defaultService] payOrder:payInfo fromScheme:_scheme callback:^(NSDictionary *resultDic) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -84,7 +87,7 @@
 
 - (void)payResult:(NSDictionary *)resultDic {
     NSString *result = [NSString stringWithFormat:@"%@", resultDic[@"resultStatus"]];
-    NSLog(@"支付结果 %@", result);
+    NSLog(@"支付结果 %@", resultDic);
     if ([result isEqualToString:@"9000"]) {
         // 订单支付成功
         [self->_channel invokeMethod:@"aliPayResult" arguments:@"Success"];
