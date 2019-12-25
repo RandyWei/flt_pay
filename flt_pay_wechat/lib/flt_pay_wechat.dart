@@ -17,8 +17,9 @@ class FltPayWechat {
       }
     });
 
-  static Future weChatInit(String appId) async {
-    await _channel.invokeMethod('weChatInit', {"appId": appId, "scheme": "https://gpjw.app.chinahrt.com/"});
+  static Future weChatInit(String appId, String scheme) async {
+    await _channel
+        .invokeMethod('weChatInit', {"appId": appId, "scheme": scheme});
   }
 
   static Future weChatPay(
