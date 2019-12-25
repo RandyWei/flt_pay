@@ -72,9 +72,12 @@
 }
 
 - (void)pay:(NSString *)payInfo {
+    NSLog(@"payInfo = %@", payInfo);
+    NSLog(@"scheme = %@", _scheme);
     // 调用支付结果开始支付
     [[AlipaySDK defaultService] payOrder:payInfo fromScheme:_scheme callback:^(NSDictionary *resultDic) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"result1 = %@",resultDic);
             [self payResult:resultDic];
         });
     }];
