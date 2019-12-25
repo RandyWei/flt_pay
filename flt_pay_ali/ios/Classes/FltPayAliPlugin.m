@@ -31,9 +31,11 @@
         result(FlutterMethodNotImplemented);
     }else if ([@"aliInit" isEqualToString:call.method]) {
         _scheme = [NSString stringWithFormat:@"%@", call.arguments[@"scheme"]];
+        NSLog(@"scheme = %@", _scheme);
         result(nil);
     }else if ([@"aliPay" isEqualToString:call.method]) {
         NSString *payInfo = [NSString stringWithFormat:@"%@", call.arguments[@"payInfo"]];
+        NSLog(@"payInfo = %@", payInfo);
         [self pay:payInfo];
         result(nil);
     }else if ([@"getPlatformVersion" isEqualToString:call.method]) {
@@ -72,12 +74,9 @@
 }
 
 - (void)pay:(NSString *)payInfo {
-    NSLog(@"payInfo = %@", payInfo);
-    NSLog(@"scheme = %@", _scheme);
     // 调用支付结果开始支付
     [[AlipaySDK defaultService] payOrder:payInfo fromScheme:_scheme callback:^(NSDictionary *resultDic) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"result1 = %@",resultDic);
             [self payResult:resultDic];
         });
     }];
@@ -85,6 +84,7 @@
 
 - (void)payResult:(NSDictionary *)resultDic {
     NSString *result = [NSString stringWithFormat:@"%@", resultDic[@"resultStatus"]];
+    NSLog(@"支付结果 %@", result);
     if ([result isEqualToString:@"9000"]) {
         // 订单支付成功
         [self->_channel invokeMethod:@"aliPayResult" arguments:@"Success"];
