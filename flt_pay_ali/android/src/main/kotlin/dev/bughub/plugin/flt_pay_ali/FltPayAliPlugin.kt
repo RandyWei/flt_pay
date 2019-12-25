@@ -27,6 +27,8 @@ class FltPayAliPlugin(activity: Activity) : MethodCallHandler {
 
     override fun onMethodCall(call: MethodCall, result: Result) {
         when (call.method) {
+            "aliInit" -> {
+            }
             "aliPay" -> {
                 val payInfo = call.argument<String>("payInfo") ?: ""
                 GlobalScope.launch {
@@ -35,11 +37,11 @@ class FltPayAliPlugin(activity: Activity) : MethodCallHandler {
                         when (payResult["resultStatus"]) {
                             "9000" -> {
                                 // 订单支付成功
-                                result.success("Success")
+                                channel?.invokeMethod("aliPayResult", "Success")
                             }
                             "6001" -> {
                                 // 用户中途取消
-                                result.success("Cancel")
+                                channel?.invokeMethod("aliPayResult", "Cancel")
                             }
                             else -> {
                                 // 8000	正在处理中，支付结果未知（有可能已经支付成功），请查询商户订单列表中订单的支付状态
@@ -48,7 +50,7 @@ class FltPayAliPlugin(activity: Activity) : MethodCallHandler {
                                 // 6002	网络连接出错
                                 // 6004	支付结果未知（有可能已经支付成功），请查询商户订单列表中订单的支付状态
                                 // 其它	其它支付错误
-                                result.success("Fail")
+                                channel?.invokeMethod("aliPayResult", "Fail")
                             }
                         }
                     }
