@@ -59,8 +59,8 @@ class FltPayWechatPlugin(private val context: Context) : MethodCallHandler, Even
                 request.partnerId = call.argument("partnerId")
                 request.prepayId = call.argument("prepayId")
                 request.packageValue = call.argument("packageValue")
-                request.nonceStr = call.argument("timeStamp")
-                request.timeStamp = call.argument("nonceStr")
+                request.nonceStr = call.argument("nonceStr")
+                request.timeStamp = call.argument("timeStamp")
                 request.sign = call.argument("sign")
                 request.extData = call.argument("extData")
                 if (request.checkArgs()) {
