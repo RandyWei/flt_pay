@@ -28,9 +28,12 @@ class FltPayAliPlugin(activity: Activity) : MethodCallHandler {
             }
             "aliPay" -> {
                 val payInfo = call.argument<String>("payInfo") ?: ""
+                payInfo.split("&").forEach {
+                    Log.d("onMethodCall", "aliPay = $it")
+                }
                 weakActivity.get()?.let { activity ->
                     val payResult = PayTask(activity).payV2(payInfo, true)
-                    Log.d("onMethodCall","payResult = $payResult")
+                    Log.d("onMethodCall", "payResult = $payResult")
                     when (payResult["resultStatus"]) {
                         "9000" -> {
                             // 订单支付成功

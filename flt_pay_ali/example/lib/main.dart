@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> _pay() async {
     try {
-      await FltPayAli.aliPay("", (String result) {
+      await FltPayAli.aliPay(_payInfo, (String result) {
         print('aliPay result : $result');
         setState(() {
           _payResult = result;
