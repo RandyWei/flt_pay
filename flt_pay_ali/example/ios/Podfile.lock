@@ -1,17 +1,11 @@
 PODS:
-  - AlipaySDK-iOS (15.6.8)
   - flt_pay_ali (0.0.1):
-    - AlipaySDK-iOS
     - Flutter
   - Flutter (1.0.0)
 
 DEPENDENCIES:
   - flt_pay_ali (from `.symlinks/plugins/flt_pay_ali/ios`)
   - Flutter (from `.symlinks/flutter/ios`)
-
-SPEC REPOS:
-  trunk:
-    - AlipaySDK-iOS
 
 EXTERNAL SOURCES:
   flt_pay_ali:
@@ -20,10 +14,9 @@ EXTERNAL SOURCES:
     :path: ".symlinks/flutter/ios"
 
 SPEC CHECKSUMS:
-  AlipaySDK-iOS: 703a55774a37f412410ab04af96c011b91ec58cb
-  flt_pay_ali: 9045adf8a618b2a7cc6ac43d8e33567e5c96b14f
+  flt_pay_ali: 3529cc0da2f553b9ac721171b1f0a2adaa47e7e5
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
 
 PODFILE CHECKSUM: 7fb83752f59ead6285236625b82473f90b1cb932
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
