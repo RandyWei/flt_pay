@@ -1,17 +1,11 @@
 PODS:
   - flt_pay_wechat (0.0.1):
     - Flutter
-    - WechatOpenSDK
   - Flutter (1.0.0)
-  - WechatOpenSDK (1.8.6)
 
 DEPENDENCIES:
   - flt_pay_wechat (from `.symlinks/plugins/flt_pay_wechat/ios`)
   - Flutter (from `.symlinks/flutter/ios`)
-
-SPEC REPOS:
-  trunk:
-    - WechatOpenSDK
 
 EXTERNAL SOURCES:
   flt_pay_wechat:
@@ -20,10 +14,9 @@ EXTERNAL SOURCES:
     :path: ".symlinks/flutter/ios"
 
 SPEC CHECKSUMS:
-  flt_pay_wechat: b23e27beed5f4d37b3215f8061d309e5a73732fb
+  flt_pay_wechat: fc4d0cd8809d36be45ba14864bdb96f6da886b24
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  WechatOpenSDK: 368ae03b72ee3ea1328c4f11326fbb5d2721d118
 
 PODFILE CHECKSUM: 7fb83752f59ead6285236625b82473f90b1cb932
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
