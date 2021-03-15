@@ -39,7 +39,30 @@ android {
     }
 }
 
+def getCurrentProjectDir() {
+    String result = ""
+    rootProject.allprojects { project ->
+        if (project.properties.get("identityPath").toString() == ":flt_pay_ali") { // 这里是flutter的约定, 插件的module名是插件名, :是gradle的约定. project前加:
+            result = project.properties.get("projectDir").toString()
+        }
+    }
+    return result
+}
+
+rootProject.allprojects {
+    // 这个闭包是循环所有project, 我们让这个仓库可以被所有module找到
+    def dir = getCurrentProjectDir()
+    repositories {
+        google()
+        jcenter()
+        maven { // 添加这个指向本地的仓库目录
+            url "$dir/alipaySdk"
+        }
+    }
+}
+
 dependencies {
     implementation fileTree(include: ['*.aar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.alipay:sdk:1.0.0"
 }
