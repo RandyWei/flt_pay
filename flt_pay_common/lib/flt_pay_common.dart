@@ -55,7 +55,7 @@ class _EmptyPay extends CommonPay {
 
 /// 注册支付方式，只有注册过才可以在[pay]方法中使用
 void registerPayment(List<CommonPay> commonPay) {
-  if (commonPay == null || commonPay.isEmpty) {
+  if (commonPay.isEmpty) {
     return;
   }
 
