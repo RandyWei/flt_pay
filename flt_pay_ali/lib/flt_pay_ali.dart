@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 class FltPayAli {
-  static Function(String result) _callback;
+  static Function(String? result)? _callback;
   static final MethodChannel _channel = MethodChannel('flt_pay_ali')
     ..setMethodCallHandler((MethodCall call) {
       switch (call.method) {
@@ -11,9 +11,9 @@ class FltPayAli {
           if (call.arguments is String) {
             _callback?.call(call.arguments);
           }
-          return null;
+          return Future.value(null);
         default:
-          return null;
+          return Future.value(null);
       }
     });
 
@@ -21,7 +21,8 @@ class FltPayAli {
     await _channel.invokeMethod('aliInit', {"scheme": scheme});
   }
 
-  static Future aliPay(String payInfo, Function(String result) callback) async {
+  static Future aliPay(
+      String payInfo, Function(String? result) callback) async {
     _callback = callback;
     await _channel.invokeMethod('aliPay', {"payInfo": payInfo});
   }
