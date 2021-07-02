@@ -65,8 +65,8 @@ void registerPayment(List<CommonPay> commonPay) {
 
 /// 发起支付方法
 Future<PayResult> pay({
-  @required PaymentType type,
-  @required payInfo,
+  required PaymentType type,
+  required payInfo,
   initData,
 }) async {
   var payment = _commonPayList.firstWhere((pay) => pay.paymentType() == type,
