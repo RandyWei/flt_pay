@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 class FltPayWechat {
-  static Function(String result) _callback;
+  static Function(String? result)? _callback;
   static final MethodChannel _channel = MethodChannel('flt_pay_wechat')
     ..setMethodCallHandler((MethodCall call) {
       switch (call.method) {
@@ -11,11 +11,11 @@ class FltPayWechat {
           if (call.arguments is String) {
             _callback?.call(call.arguments);
           }
-          return null;
+          return Future.value(null);
         default:
-          return null;
+          return Future.value(null);
       }
-    });
+    } );
 
   static Future weChatInit(String appId, String scheme) async {
     await _channel
@@ -23,7 +23,7 @@ class FltPayWechat {
   }
 
   static Future weChatPay(
-      Map<String, dynamic> payInfo, Function(String result) callback) async {
+      Map<String, dynamic> payInfo, Function(String? result) callback) async {
     _callback = callback;
     var arguments = {
       "appId": payInfo["appid"],
