@@ -42,8 +42,8 @@ android {
 def getCurrentProjectDir() {
     String result = ""
     rootProject.allprojects { project ->
-        if (project.properties.get("identityPath").toString() == ":flt_pay_ali") { // 这里是flutter的约定, 插件的module名是插件名, :是gradle的约定. project前加:
-            result = project.properties.get("projectDir").toString()
+        if (project.property("identityPath").toString() == ":flt_pay_ali") { // 这里是flutter的约定, 插件的module名是插件名, :是gradle的约定. project前加:
+            result = project.property("projectDir").toString()
         }
     }
     return result
