@@ -53,7 +53,7 @@ class FltPayAliPlugin(activity: Activity) : MethodCallHandler {
         @JvmStatic
         fun registerWith(registrar: Registrar) {
             channel = MethodChannel(registrar.messenger(), "flt_pay_ali")
-            channel?.setMethodCallHandler(FltPayAliPlugin(registrar.activity()))
+            channel?.setMethodCallHandler(registrar.activity()?.let { FltPayAliPlugin(it) })
         }
     }
 
