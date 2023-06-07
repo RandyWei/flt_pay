@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aef1bbdc-e61b-49da-a508-174c714533c4" name="Default Changelist" comment="merge androidx and flutter v2&#10;&#10;(cherry picked from commit 130a512dea91a26d15f813c5887845249acc1867)" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ujw3Zgl3kyGrSLgZFGwHpWb2oc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aef1bbdc-e61b-49da-a508-174c714533c4" name="Default Changelist" comment="" />
+      <created>1625192107970</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625192107970</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Migrating flutter v2&#10;&#10;(cherry picked from commit 0e7d165a351cc3352c9c36ef8f7837985388aea4)">
+      <created>1625214476615</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625214476615</updated>
+    </task>
+    <task id="LOCAL-00002" summary="merge androidx and flutter v2&#10;&#10;(cherry picked from commit 130a512dea91a26d15f813c5887845249acc1867)">
+      <created>1625214496177</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625214496177</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="onlyAndroid" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Migrating flutter v2&#10;&#10;(cherry picked from commit 0e7d165a351cc3352c9c36ef8f7837985388aea4)" />
+    <MESSAGE value="merge androidx and flutter v2&#10;&#10;(cherry picked from commit 130a512dea91a26d15f813c5887845249acc1867)" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge androidx and flutter v2&#10;&#10;(cherry picked from commit 130a512dea91a26d15f813c5887845249acc1867)" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="524" y="92" key="CommitChangelistDialog2" timestamp="1625214496029">
+      <screen x="0" y="25" width="1920" height="995" />
+    </state>
+    <state x="524" y="92" key="CommitChangelistDialog2/1920.-32.1600.875/0.25.1920.995@0.25.1920.995" timestamp="1625214496029" />
+    <state x="195" y="97" key="DiffContextDialog" timestamp="1625214581714">
+      <screen x="0" y="25" width="1920" height="995" />
+    </state>
+    <state x="195" y="97" key="DiffContextDialog/1920.-32.1600.875/0.25.1920.995@0.25.1920.995" timestamp="1625214581714" />
+    <state x="192" y="111" key="MergeDialog" timestamp="1625214447313">
+      <screen x="0" y="25" width="1920" height="995" />
+    </state>
+    <state x="192" y="111" key="MergeDialog/1920.-32.1600.875/0.25.1920.995@0.25.1920.995" timestamp="1625214447313" />
+    <state x="600" y="288" key="MultipleFileMergeDialog" timestamp="1625214484285">
+      <screen x="0" y="25" width="1920" height="995" />
+    </state>
+    <state x="600" y="288" key="MultipleFileMergeDialog/1920.-32.1600.875/0.25.1920.995@0.25.1920.995" timestamp="1625214484285" />
+    <state x="560" y="259" key="Vcs.Push.Dialog.v2" timestamp="1625214596964">
+      <screen x="0" y="25" width="1920" height="995" />
+    </state>
+    <state x="560" y="259" key="Vcs.Push.Dialog.v2/1920.-32.1600.875/0.25.1920.995@0.25.1920.995" timestamp="1625214596964" />
+    <state x="659" y="277" width="640" height="490" key="find.popup" timestamp="1625214540714">
+      <screen x="0" y="25" width="1920" height="995" />
+    </state>
+    <state x="659" y="277" width="640" height="490" key="find.popup/1920.-32.1600.875/0.25.1920.995@0.25.1920.995" timestamp="1625214540714" />
+  </component>
+</project>

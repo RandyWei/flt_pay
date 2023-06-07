@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_ali/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_ali/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_ali/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_ali/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_common/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_common/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_wechat/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_wechat/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_wechat/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flt_pay_wechat/example/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
