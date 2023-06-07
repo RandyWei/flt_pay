@@ -4,6 +4,9 @@ import android.app.Activity
 import android.os.Handler
 import android.util.Log
 import com.alipay.sdk.app.PayTask
+import io.flutter.embedding.engine.plugins.FlutterPlugin
+import io.flutter.embedding.engine.plugins.activity.ActivityAware
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
@@ -12,8 +15,10 @@ import io.flutter.plugin.common.PluginRegistry.Registrar
 import java.lang.ref.WeakReference
 import kotlin.concurrent.thread
 
-class FltPayAliPlugin(activity: Activity) : MethodCallHandler {
-    private val weakActivity: WeakReference<Activity> = WeakReference(activity)
+class FltPayAliPlugin :FlutterPlugin,ActivityAware, MethodCallHandler {
+    private lateinit var weakActivity: WeakReference<Activity>
+
+    private lateinit var binding: ActivityPluginBinding
 
     private val handler: Handler = Handler { msg ->
         when (msg.what) {
@@ -52,8 +57,7 @@ class FltPayAliPlugin(activity: Activity) : MethodCallHandler {
         var channel: MethodChannel? = null
         @JvmStatic
         fun registerWith(registrar: Registrar) {
-            channel = MethodChannel(registrar.messenger(), "flt_pay_ali")
-            channel?.setMethodCallHandler(registrar.activity()?.let { FltPayAliPlugin(it) })
+
         }
     }
 
@@ -78,5 +82,33 @@ class FltPayAliPlugin(activity: Activity) : MethodCallHandler {
                 result.notImplemented()
             }
         }
+    }
+
+    override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+        channel = MethodChannel(binding.binaryMessenger, "flt_pay_ali")
+        channel?.setMethodCallHandler(this)
+    }
+
+    override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+        channel?.setMethodCallHandler(null)
+        channel = null
+    }
+
+    override fun onAttachedToActivity(binding: ActivityPluginBinding) {
+        this.binding = binding
+        this.weakActivity = WeakReference(binding.activity)
+    }
+
+    override fun onDetachedFromActivityForConfigChanges() {
+
+    }
+
+    override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
+        this.binding = binding
+        this.weakActivity = WeakReference(binding.activity)
+    }
+
+    override fun onDetachedFromActivity() {
+
     }
 }
