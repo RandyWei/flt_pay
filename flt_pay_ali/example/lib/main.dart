@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flt_pay_ali/flt_pay_ali.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
@@ -15,14 +14,14 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _payInfo = "";
 
-  String _payResult;
+   String _payResult="";
 
   Future<void> _pay() async {
     try {
-      await FltPayAli.aliPay(_payInfo, (String result) {
+      await FltPayAli.aliPay(_payInfo, (String? result) {
         print('aliPay result : $result');
         setState(() {
-          _payResult = result;
+          _payResult = result??"";
         });
       });
     } on PlatformException {
@@ -48,7 +47,7 @@ class _MyAppState extends State<MyApp> {
               padding: const EdgeInsets.all(8.0),
               child: Text('Pay info:\n$_payInfo\n'),
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: _pay,
               child: Text('pay'),
             ),
