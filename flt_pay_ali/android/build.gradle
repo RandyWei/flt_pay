@@ -27,6 +27,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace 'dev.bughub.plugin.flt_pay_ali'
     compileSdkVersion 33
 
     sourceSets {

@@ -1,5 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.bughub.plugin.flt_pay_ali">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--  支付宝 SDK 在运行时需要进行网络连接，并在必要的时候判断网络连接的状态（4G/Wi-Fi）等来进行支付体验的优化。  -->
     <uses-permission android:name="android.permission.INTERNET" />
