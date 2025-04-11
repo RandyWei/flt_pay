@@ -26,6 +26,7 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
+    namespace 'dev.bughub.plugin.flt_pay_wechat_example'
     compileSdkVersion 33
 
     sourceSets {
